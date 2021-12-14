@@ -166,6 +166,11 @@ ul {
   border: 1px solid #FFFFFF;
 }
 
+button.btn {
+  border: none;
+  color: #FFFFFF;
+}
+
 .flex--cont,
 .flex--cont-col {
   display: -webkit-box;
@@ -766,20 +771,20 @@ ul {
 .experience-sec {
   background-color: #212128;
   text-align: center;
+  padding: 2rem;
+  position: relative;
 }
 
 .experience-sec__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 3rem 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -835,83 +840,79 @@ ul {
   }
 }
 
-.experience-sec .experience-1 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 5rem (1fr)[3];
-      grid-template-columns: 5rem repeat(3, 1fr);
-  padding: .5rem 2.5rem;
-  gap: 2rem;
+.experience-sec .experience-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 250px;
+  padding: 2rem;
+  display: none;
 }
 
-@media screen and (max-width: 910px) {
-  .experience-sec .experience-1 {
-    padding: .5rem 1rem;
-  }
+.experience-sec .experience-container.active {
+  display: block;
 }
 
-@media screen and (max-width: 680px) {
-  .experience-sec .experience-1 {
-    -ms-grid-rows: 1fr min-content;
-        grid-template-rows: 1fr -webkit-min-content;
-        grid-template-rows: 1fr min-content;
-  }
+.experience-sec .experience-container .primary--text {
+  line-height: 1.4;
+  padding: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.5rem;
 }
 
-@media screen and (max-width: 500px) {
-  .experience-sec .experience-1 {
-    padding: .5rem;
-  }
+.experience-sec .experience-container .btn {
+  margin: 0 auto;
 }
 
-.experience-sec .experience-1 .primary--text {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2 / 4;
+.experience-sec .experience-container .btn:last-of-type {
+  margin-left: 1.5rem;
 }
 
-@media screen and (max-width: 910px) {
-  .experience-sec .experience-1 .primary--text {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1 / 4;
-  }
+.experience-sec .experience-container .experience__modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 90%;
+  background-color: #0a2338;
+  margin: 0 auto;
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: .5rem;
+  padding: .3rem;
+  -webkit-box-shadow: 0 1rem 2rem #0F0F2C;
+          box-shadow: 0 1rem 2rem #0F0F2C;
 }
 
-@media screen and (max-width: 680px) {
-  .experience-sec .experience-1 .primary--text {
-    grid-column: 1 / -1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
-    padding: .5rem 1.5rem;
-  }
+.experience-sec .experience-container .experience__modal-container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@media screen and (max-width: 500px) {
-  .experience-sec .experience-1 .primary--text {
-    padding: .5rem;
-    font-size: 1.1rem;
-  }
-}
-
-.experience-sec .experience-1 .btn {
-  grid-column: 4 / -1;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  width: 10rem;
-  padding: .5rem 0;
+.experience-sec .experience-container .experience__modal-container .primary--text {
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 680px) {
-  .experience-sec .experience-1 .btn {
-    grid-column: 1 / -1;
-    grid-row: 2 / -1;
-  }
+.experience-sec .experience-container .experience__modal-container div {
+  width: 50%;
+}
+
+.experience-sec .experience-container .experience__modal-container #btn--modal {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .projects-sec {

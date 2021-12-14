@@ -16,10 +16,10 @@
         <nav class="header__nav">
             <div class="header__nav--container">
                 <a href="./index.html" class="header__nav--item btn">Home</a>
-                <a href="#" class="header__nav--item btn">About</a>
-                <a href="#" class="header__nav--item btn">Experience</a>
-                <a href="#" class="header__nav--item btn">Projects</a>
-                <a href="#" class="header__nav--item btn">Contact</a>
+                <a href="#info-section" class="header__nav--item btn">About</a>
+                <a href="#experience-sec" class="header__nav--item btn">Experience</a>
+                <a href="#projects-sec" class="header__nav--item btn">Projects</a>
+                <a href="#contact-sec" class="header__nav--item btn">Contact</a>
                 <a href="./articles.html" class="header__nav--item btn">Articles</a>
             </div>
             <button class="btn" id="btn-deactive">
@@ -38,7 +38,7 @@
         </div>
     </header>
 
-    <section class="info-section">
+    <section class="info-section" id="info-section">
         <div class="sec-container">
             <div class="left-div">
                 <h6 class="primary--header">Who am I ?</h6>
@@ -106,29 +106,120 @@
             </div>
         </div>
     </section>
-    <section class="experience-sec">
-        <div class="sec-container">
+    <section class="experience-sec" id="experience-sec">
+        <div class="experiences">
             <h5 class="primary--header">Experience</h5>
             <div class="experience-sec__list">
                 <button class="btn experience-sec__list--item active" id="experience-1">RBA intern</button>
                 <button class="btn experience-sec__list--item" id="experience-2">School's experience</button>
                 <button class="btn experience-sec__list--item" id="experience-3">Andela ATLP</button>
             </div>
-            <div class="experience-1">
-                <p class="primary--text experience-1__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit cursus turpis
-                    parturient vitae diam. Mauris, aliquet integer egestas orci habitant enim
-                    phasellus amet. Neque etiam nulla venenatis, egestas. Duis etiam porta id
-                    pharetra vulputate viverra diam. Quis gravida pellentesque interdum
-                    euismod cursus tellus. Sit diam dignissim ut pulvinar sed velit accumsan.
+            <div class="experience-container active" id="rba-experience">
+                <h6 class="secondary--header">I was trained in the following departments.</h6>
+                <p class="primary--text">
+                    <small>Transmission and Energy Engineer</small>
+                    <small>Radio Engineer</small>
+                    <small>IT</small>
                 </p>
-                <a href="#" class="btn btn__primary">Click to see certificate</a>
+                <button class="btn btn__create" id="exp-btn">Click to lead more of each department</button>
+                <a href="#" class="btn btn__create">View Certificate</a>
+                
+                <div class="experience__modal-container">
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <button class="btn btn__primary" id="btn--modal">
+                        <img src="./dist/img/close.svg" alt="">
+                    </button>
+                </div>
             </div>
-
+            <div class="experience-container" id="school-experience">
+                <h6 class="secondary--header">I was trained in the following departments.</h6>
+                <p class="primary--text">
+                    <small>Transmission and Energy Engineer</small>
+                    <small>Radio Engineer</small>
+                    <small>IT</small>
+                </p>
+                <button class="btn btn__create" id="exp-btn">Click to lead more of each department</button>
+                <a href="#" class="btn btn__create">View Certificate</a>
+                
+                <div class="experience__modal-container">
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <button class="btn btn__primary" id="btn--modal">
+                        <img src="./dist/img/close.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="experience-container" id="andela-experience">
+                <h6 class="secondary--header">I was trained in the following departments.</h6>
+                <p class="primary--text">
+                    <small>Transmission and Energy Engineer</small>
+                    <small>Radio Engineer</small>
+                    <small>IT</small>
+                </p>
+                <button class="btn btn__create" id="exp-btn">Click to lead more of each department</button>
+                <a href="#" class="btn btn__create">View Certificate</a>
+                
+                <div class="experience__modal-container">
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <div class="experience__department">
+                        <h6 class="secondary--header">Transmission and Energy Engineer</h6>
+                        <p class="primary--text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corporis, suscipit animi numquam iure reprehenderit libero praesentium a. Obcaecati debitis tempora repellat, omnis temporibus amet hic expedita quaerat quas natus.
+                        </p>
+                    </div>
+                    <button class="btn btn__primary" id="btn--modal">
+                        <img src="./dist/img/close.svg" alt="">
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="projects-sec">
+    <section class="projects-sec" id="projects-sec">
         <div class="sec-container">
             <h5 class="primary--header">Projects</h5>
             <div class="cards">
@@ -157,7 +248,7 @@
         </div>
     </section>
 
-    <section class="contact-sec">
+    <section class="contact-sec" id="contact-sec">
         <div class="sec-container">
             <h5 class="primary--header"> Contact us</h5>
             <div class="left-div">
@@ -189,7 +280,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="sec-containerss">
             <div class="footer__contents">
                 <div class="footer__nav">

@@ -4,6 +4,7 @@ $secondary-font: 'Nunito', sans-serif;
 $primary-color: #0F0F2C;
 $secondary-color: #212128;
 $tertiary-color: rgba(10, 35, 56, 0.883);
+$tertiary-color-sec: rgb(10, 35, 56);
 $tertiary-secondary-color: rgba(14, 74, 118, 89%);
 $tertiary-tertiary-color: rgba(15, 15, 44, 56%);
 $quadriple-color: rgba(52, 52, 161, 91%);
@@ -161,6 +162,11 @@ ul {
         background-color: $primary-color;
         border: 1px solid $white-color;
     }
+}
+
+button.btn {
+    border: none;
+    color: $white-color;
 }
 
 .flex--cont,
@@ -587,12 +593,15 @@ ul {
 .experience-sec {
     background-color: $secondary-color;
     text-align: center;
+    padding: 2rem;
+    position: relative;
+
+
     &__list {
+
         display: flex;
-        gap: 5rem;
         align-items: center;
         justify-content: center;
-        margin: 3rem 0;
 
         @media  screen and (max-width: 600px) {
             gap: 2rem;
@@ -631,58 +640,67 @@ ul {
         }
     }
 
-    .experience-1 {
-        display: grid;
-        grid-template-columns: 5rem repeat(3, 1fr);
-        padding: .5rem 2.5rem;
-        gap: 2rem;
+    .experience-container {
+        width: 80%;
+        margin: 0 auto;
+        height: 250px;
+        padding: 2rem;
+        display: none;
 
-        @media  screen and (max-width: 910px) {
-            padding: .5rem 1rem;
+        &.active {
+            display: block;
         }
-
-        @media  screen and (max-width: 680px) {
-            grid-template-rows: 1fr min-content;
-        }
-        @media  screen and (max-width: 500px) {
-            padding: .5rem;
-        }
-
-        
 
         .primary--text {
-            grid-column: 2 / 4;
+            line-height: 1.4;
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.5rem;
 
-            @media  screen and (max-width: 910px) {
-                grid-column: 1 / 4;
-            }
-
-            @media  screen and (max-width: 680px) {
-                grid-column: 1 / -1;
-                grid-row: 1 / 2;
-                padding: .5rem 1.5rem;
-
-            }
-            @media  screen and (max-width: 500px) {
-                padding: .5rem;
-                font-size: 1.1rem;
-            }
-            
         }
+
         .btn {
-            grid-column: 4 / -1;
-            align-self: center;
-            justify-self: center;
-            width: 10rem;
-            padding: .5rem 0;
-            font-size: 1.2rem;
+            margin: 0 auto;
+            &:last-of-type {
+                margin-left: 1.5rem;
+            }
+        }
 
-            @media  screen and (max-width: 680px) {
-                grid-column: 1 / -1;
-                grid-row: 2 / -1;
+        .experience__modal-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 90%;
+            background-color: $tertiary-color-sec;
+            margin: 0 auto;
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-radius: .5rem;
+            padding: .3rem;
+            box-shadow: 0 1rem 2rem $primary-color;
 
+            &.active {
+                display: flex;
             }
 
+            .primary--text {
+                font-size: 1.2rem;
+            }
+
+            div {
+                width: 50%
+            }
+
+            #btn--modal {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
         }
     }
 }
