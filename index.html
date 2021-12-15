@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Rancho&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./dist/css/main.css" />
     <title>Emmanuel's Brand</title>
   </head>
@@ -45,6 +46,9 @@
       </div>
     </header>
 
+    <a href="#" class="back-top-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
   <section class="login-sec">
     <div class="sec-containerss">
         <h5 class="primary--header">Login</h5>
@@ -90,12 +94,7 @@
                 and turn it into a reality, time and again, it's me.
               </p>
               <p class="primary--text grid-two">
-                I am currently a fresh graduate of Electronics and
-                Telecommunication Engineering from the University of
-                Rwanda/College of Science and Technology. My ambition is to
-                extend my acquired expertise and Machine learning Innovation
-                principles by self-study and the application of multiple models
-                in order to assist people all over the world.
+                Learning is vital in my life. As food feeds my body, information and learning nurture my mind. Knowledge and skills can be gained and my skills expanded to develop future opportunities. This helps me continue to improve and develop, so that I feel empowered and reinforce my self-confidence, which increases the ability to take risks and helps me face problems.
               </p>
               <p class="primary--text grid-three">
                 Health and fitness have long been top priorities around the
@@ -107,8 +106,10 @@
                 Electronics, Telecommunication and Matlab
               </p>
               <p class="primary--text grid-four">
-                Checkout <span>certificates</span>, <span>projects</span>, and
-                <span>Resume</span> to know more about me.
+                Checkout
+                <a href="#" class="btn">certificates</a> 
+                <a href="#" class="btn">projects</a> 
+                <a href="#" class="btn">Resume</a>to know more about me.
               </p>
 
               <button class="btn btn__primary" id="btn-deactive--modal">
@@ -191,51 +192,74 @@
         </div>
         <div class="experience-container active" id="rba-experience">
           <h6 class="secondary--header">
-            I was trained in the following departments.
+            I was trained By Rwanda Broadcasting Agency Engineers. <span> I rapidly discovered that performing engineering on paper and a computer is not the same as 
+              doing it in real life.</span>
           </h6>
-          <p class="primary--text">
-            <small>Transmission and Energy Engineer</small>
-            <small>Radio Engineer</small>
-            <small>IT</small>
+
+          <p class="secondary--text">
+              My daily activities was to make sure that broadcasting is going smoothly which is detailed in each departments:
           </p>
+          <ul class="department--list">
+            <li>
+              <small>Transmission and Energy Engineer</small>
+            </li>
+            <li>
+              <small>Radio Engineer</small>
+            </li>
+            <li>
+              <small>IT</small>
+            </li>
+          </ul>
           <button class="btn btn__create exp-btn">
-            Click to lead more of each department
+            Click to learn more of each department
           </button>
           <a href="#" class="btn btn__create">View Certificate</a>
 
-          <div class="experience__modal-container">
+          <div class="experience__modal-container" id="rba-experience--modal">
             <div class="experience__department">
               <h6 class="secondary--header">
                 Transmission and Energy Engineer
               </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
+              <ul class="experience-list-modal">
+                <li>Transmitting prepared signal to the tower before broadcasting.</li>
+                <li>Troubleshooting radio transmitter and receiver devices.</li>
+                <li>Accessing different towers to troubleshoot in case of emergence.</li>
+                <li>Electrical and Electronics installation inside the main branch of RBA and outside to the towers.</li>
+              </ul>
             </div>
             <div class="experience__department">
               <h6 class="secondary--header">
-                Transmission and Energy Engineer
+                Radio Engineer
               </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
+              <ul class="experience-list-modal">
+                <li>
+                  Working as Radio mixers by processing and producing required programs before broadcasting.
+                </li>
+                <li>
+                  Troubleshooting radios, mixers, microphones in case there is a malfunction.
+                </li>
+                <li>
+                  Preparing Events required to be broadcasted.
+                </li>
+              </ul>
             </div>
             <div class="experience__department">
               <h6 class="secondary--header">
-                Transmission and Energy Engineer
+                IT
               </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
+              <ul class="experience-list-modal">
+                <li>
+                  Streaming the program prepared by another department.
+                </li>
+                <li>
+                  Connecting different departments by providing access to different resources inside the house.
+                </li>
+                <li>
+                  Troubleshooting servers, computers, and other devices in case of malfunction.
+                </li>
+
+              </ul>
+
             </div>
             <button class="btn btn__primary btn--modal">
               <img src="./dist/img/close.svg" alt="" />
@@ -244,51 +268,94 @@
         </div>
         <div class="experience-container" id="school-experience">
           <h6 class="secondary--header">
-            I was trained in the following departments. Second at all
+            What is great about learning new skills daily?
           </h6>
+
           <p class="primary--text">
-            <small>Transmission and Energy Engineer</small>
-            <small>Radio Engineer</small>
-            <small>IT</small>
+            Learning is vital in my life. As food feeds my body, information and learning nurture my mind. Knowledge and skills can be gained and my skills expanded to develop future opportunities. This helps me continue to improve and develop, so that I feel empowered and reinforce my self-confidence, which increases the ability to take risks and helps me face problems.
           </p>
           <button class="btn btn__create exp-btn">
-            Click to lead more of each department
+            Click to learn more about programs and certifications.
           </button>
-          <a href="#" class="btn btn__create">View Certificate</a>
 
-          <div class="experience__modal-container">
+          <div class="experience__modal-container speci" id="school-experience--modal">
             <div class="experience__department">
-              <h6 class="secondary--header">
-                Transmission and Energy Engineer
-              </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
+              <h6 class="secondary--header">Courses and Programs with their Certificates</h6>
+              <ul class="certificate__list">
+                <li class="certificate__list--item">
+                  <span>Mathematics for Machine Learning: Linear Algebra</span>
+                  <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/EU37Q38SDEJS?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Mathematics for Machine Learning: Multivariate Calculus.</span>
+                  <a target="_blank" href="https://coursera.org/share/2af8ebc836cbc2e9c6bd1fbe117e38e0">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Introduction to Git and GitHub. </span>
+                  <a target="_blank" href="https://coursera.org/share/2d83f08232485c8537a398695723c51f">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Introduction to Programming with MATLAB.</span>
+                  <a target="_blank" href="https://coursera.org/share/96c737f38ee546eea4463c371ffee648">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a target="_blank" href="https://coursera.org/share/a9a26fcbdd1bdb4870e058402dda10f1">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Exploratory Data Analysis for Machine Learning. </span>
+                  <a target="_blank" href="https://coursera.org/share/0d06bcd3bd948bc2b717fd193d51723b">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>AWS Machine Learning Foundations.</span>
+                  <a target="_blank" href="https://confirm.udacity.com/4RYSH4UP">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning Onramp.</span>
+                  <a target="_blank" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=c4751f28-98aa-4c3d-a147-d704d16cf115&">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Image Processing Onramp.</span>
+                  <a target="_blank" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=b4fb95cd-6fed-454f-8b8c-a7a7ad2ccc02&">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Signal Processing Onramp.</span>
+                  <a target="_blank" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6d170b74-22f0-466c-81f1-96df2482edb9&">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>OOP with python</span>
+                  <a href="#">certificate</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning with Python</span>
+                  <a href="#">certificate</a>
+                </li>
+              </ul>
             </div>
             <div class="experience__department">
-              <h6 class="secondary--header">
-                Transmission and Energy Engineer
-              </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
-            </div>
-            <div class="experience__department">
-              <h6 class="secondary--header">
-                Transmission and Energy Engineer
-              </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
+              <h6 class="secondary--header">Courses and Programs in progress</h6>
+              <ul class="certificate__list progress">
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+                <li class="certificate__list--item">
+                  <span>Machine Learning</span>
+                  <a href="#">course or program location</a>
+                </li>
+              </ul>
             </div>
             <button class="btn btn__primary btn--modal">
               <img src="./dist/img/close.svg" alt="" />
@@ -297,52 +364,20 @@
         </div>
         <div class="experience-container" id="andela-experience">
           <h6 class="secondary--header">
-            I was trained in the following departments. Third at all.
+            Increasing knowledge to maximize ability of taking risks through expertise is what I am doing in Andela Technical Leadership Program.
           </h6>
-          <p class="primary--text">
-            <small>Transmission and Energy Engineer</small>
-            <small>Radio Engineer</small>
-            <small>IT</small>
-          </p>
+          <p class="primary--text">The Andela Technical Leadership Program (formerly known as StackUp) is now a 9 months career Accelerator program implemented by Andela in partnership with the Ministry of ICT and Innovation.</p>
           <button class="btn btn__create exp-btn">
-            Click to lead more of each department
+            Click to learn more about programs.
           </button>
-          <a href="#" class="btn btn__create">View Certificate</a>
 
-          <div class="experience__modal-container">
+          <div class="experience__modal-container special" id="andela-experience--modal">
             <div class="experience__department">
-              <h6 class="secondary--header">
-                Transmission and Energy Engineer
-              </h6>
               <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
+                The program aims at empowering Rwandese nationals with the prerequisite software engineering skills to become world-class engineers. It's a blend of technical and soft skills training that is essential for professionals to thrive in any work environment, especially when working with a distributed team.
               </p>
             </div>
-            <div class="experience__department">
-              <h6 class="secondary--header">
-                Transmission and Energy Engineer
-              </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
-            </div>
-            <div class="experience__department">
-              <h6 class="secondary--header">
-                Transmission and Energy Engineer
-              </h6>
-              <p class="primary--text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                corporis, suscipit animi numquam iure reprehenderit libero
-                praesentium a. Obcaecati debitis tempora repellat, omnis
-                temporibus amet hic expedita quaerat quas natus.
-              </p>
-            </div>
+            <a href="https://andela.com/engineers/technical-leadership-program-rwanda/" target="_blank" class="btn">Click here to learn more</a>
             <button class="btn btn__primary btn--modal">
               <img src="./dist/img/close.svg" alt="" />
             </button>

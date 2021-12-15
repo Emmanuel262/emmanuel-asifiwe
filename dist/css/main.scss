@@ -43,6 +43,40 @@ body {
 a {
   color: $white-color;
   text-decoration: none;
+
+  &.back-top-top {
+    color: $black-color;
+    background-color: $tertiary-secondary-color;
+    font-size: 3rem;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 0rem;
+    z-index: 10000;
+    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    opacity: 0;
+
+    &.active {
+      bottom: 2rem;
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    &:hover {
+      background-color: rgba(14, 75, 118, 0.445);
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
 }
 
 ul {
@@ -466,6 +500,11 @@ button.btn {
           grid-column: 1 / -1;
           grid-row: 3 / -1;
           text-align: center;
+
+          .btn {
+            margin: 0 0.7rem;
+            background-color: $secondary-color;
+          }
         }
       }
 
@@ -581,7 +620,8 @@ button.btn {
 .experience-sec {
   background-color: $secondary-color;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
+  padding-bottom: 4rem;
   position: relative;
 
   &__list {
@@ -630,25 +670,54 @@ button.btn {
     width: 80%;
     margin: 0 auto;
     height: 250px;
-    padding: 2rem;
+    padding: 1rem;
     display: none;
+    justify-content: center;
+    align-items: center;
 
     &.active {
       display: block;
     }
 
+    .secondary--text {
+      font-size: 1rem;
+      color: $tertiary-secondary-color;
+      text-decoration: underline;
+    }
+
+    .department--list {
+      margin: 1rem 0;
+      li {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+    }
+
+    .secondary--header {
+      margin-bottom: 0;
+      span {
+        color: rgba(172, 172, 172, 0.726);
+        display: block;
+        margin-top: 0.5rem;
+        font-family: $secondary-font;
+        font-size: 1.2rem;
+      }
+    }
+
     .primary--text {
-      line-height: 1.4;
-      padding: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin: 1rem 0;
     }
 
     .btn {
       margin: 0 auto;
       &:last-of-type {
         margin-left: 1.5rem;
+      }
+
+      &.exp-btn {
+        margin-top: 1rem;
       }
     }
 
@@ -658,19 +727,106 @@ button.btn {
       left: 0;
       right: 0;
       bottom: 0;
-      height: 100%;
+      height: auto;
+      min-height: 150% !important;
       width: 90%;
+      z-index: 100000;
       background-color: $tertiary-color-sec;
       margin: 0 auto;
       display: none;
       flex-wrap: wrap;
       justify-content: center;
       border-radius: 0.5rem;
-      padding: 0.3rem;
+      padding: 2rem;
       box-shadow: 0 1rem 2rem $primary-color;
+      overflow: auto;
+      animation-duration: 0.4s;
+
+      &.special {
+        flex-direction: column;
+        min-height: 100% !important;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+          margin: 0 auto;
+        }
+      }
 
       &.active {
         display: flex;
+      }
+      &#rba-experience--modal {
+        animation-name: slideinLeft;
+      }
+      &#school-experience--modal {
+        animation-name: slidein;
+      }
+      &#andela-experience--modal {
+        animation-name: slideinRight;
+      }
+
+      &.speci {
+        flex-wrap: initial;
+        gap: 4rem;
+
+        .experience__department {
+          width: 70%;
+          gap: 0.1rem;
+          .secondary--header {
+            margin-bottom: 0.5rem;
+          }
+
+          &:last-of-type {
+            width: 65%;
+          }
+          .certificate__list {
+            padding: 0.5rem 0;
+            width: 100%;
+
+            &--item {
+              padding: 0.5rem;
+              border: 1px solid $white-color-sec;
+              border-bottom: none;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 1.1rem;
+
+              &:last-of-type {
+                border-bottom: 1px solid $white-color-sec;
+              }
+
+              a {
+                color: rgb(34, 34, 221);
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .experience {
+        &__department {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-left: 2rem;
+          gap: 1.5rem;
+
+          &:last-of-type {
+            width: 70%;
+          }
+          .experience-list-modal {
+            text-align: start;
+            list-style-type: circle;
+            li {
+              padding: 0.5rem 0;
+              font-size: 1.1rem;
+            }
+          }
+        }
       }
 
       .primary--text {
@@ -1721,9 +1877,8 @@ section.login-sec {
       border-radius: 0.5rem;
     }
 
-    .article__description {
-      width: 70%;
-      height: 200px;
+    #article__description {
+      border: 1px solid red;
     }
   }
 }
@@ -1747,5 +1902,27 @@ section.login-sec {
   to {
     opacity: 0;
     top: 50%;
+  }
+}
+@keyframes slideinLeft {
+  from {
+    opacity: 0;
+    left: -20rem;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes slideinRight {
+  from {
+    opacity: 0;
+    right: -20rem;
+  }
+
+  to {
+    opacity: 1;
+    right: 0;
   }
 }

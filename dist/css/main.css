@@ -31,6 +31,49 @@ a {
   text-decoration: none;
 }
 
+a.back-top-top {
+  color: #000000;
+  background-color: #0e4a76;
+  font-size: 3rem;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 0rem;
+  z-index: 10000;
+  padding: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+a.back-top-top.active {
+  bottom: 2rem;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+a.back-top-top:hover {
+  background-color: rgba(14, 75, 118, 0.445);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+a.back-top-top:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 ul {
   list-style-type: none;
 }
@@ -603,6 +646,11 @@ button.btn {
   text-align: center;
 }
 
+.info-section .about--modal-container .primary--text.grid-four .btn {
+  margin: 0 0.7rem;
+  background-color: #212128;
+}
+
 .info-section .about--modal-container .btn.btn__primary {
   position: absolute;
   top: 0;
@@ -776,7 +824,8 @@ button.btn {
 .experience-sec {
   background-color: #212128;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
+  padding-bottom: 4rem;
   position: relative;
 }
 
@@ -849,25 +898,51 @@ button.btn {
   width: 80%;
   margin: 0 auto;
   height: 250px;
-  padding: 2rem;
+  padding: 1rem;
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .experience-sec .experience-container.active {
   display: block;
 }
 
+.experience-sec .experience-container .secondary--text {
+  font-size: 1rem;
+  color: #0e4a76;
+  text-decoration: underline;
+}
+
+.experience-sec .experience-container .department--list {
+  margin: 1rem 0;
+}
+
+.experience-sec .experience-container .department--list li {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.experience-sec .experience-container .secondary--header {
+  margin-bottom: 0;
+}
+
+.experience-sec .experience-container .secondary--header span {
+  color: rgba(172, 172, 172, 0.726);
+  display: block;
+  margin-top: 0.5rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+}
+
 .experience-sec .experience-container .primary--text {
-  line-height: 1.4;
-  padding: 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 1rem 0;
 }
 
 .experience-sec .experience-container .btn {
@@ -878,14 +953,20 @@ button.btn {
   margin-left: 1.5rem;
 }
 
+.experience-sec .experience-container .btn.exp-btn {
+  margin-top: 1rem;
+}
+
 .experience-sec .experience-container .experience__modal-container {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
+  height: auto;
+  min-height: 150% !important;
   width: 90%;
+  z-index: 100000;
   background-color: #0a2338;
   margin: 0 auto;
   display: none;
@@ -895,15 +976,132 @@ button.btn {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 0.5rem;
-  padding: 0.3rem;
+  padding: 2rem;
   -webkit-box-shadow: 0 1rem 2rem #0f0f2c;
           box-shadow: 0 1rem 2rem #0f0f2c;
+  overflow: auto;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+
+.experience-sec .experience-container .experience__modal-container.special {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100% !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.experience-sec .experience-container .experience__modal-container.special .btn {
+  margin: 0 auto;
 }
 
 .experience-sec .experience-container .experience__modal-container.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.experience-sec .experience-container .experience__modal-container#rba-experience--modal {
+  -webkit-animation-name: slideinLeft;
+          animation-name: slideinLeft;
+}
+
+.experience-sec .experience-container .experience__modal-container#school-experience--modal {
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+.experience-sec .experience-container .experience__modal-container#andela-experience--modal {
+  -webkit-animation-name: slideinRight;
+          animation-name: slideinRight;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci {
+  -ms-flex-wrap: initial;
+      flex-wrap: initial;
+  gap: 4rem;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci .experience__department {
+  width: 70%;
+  gap: 0.1rem;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci .experience__department .secondary--header {
+  margin-bottom: 0.5rem;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci .experience__department:last-of-type {
+  width: 65%;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci .experience__department .certificate__list {
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci .experience__department .certificate__list--item {
+  padding: 0.5rem;
+  border: 1px solid #ffffff41;
+  border-bottom: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci .experience__department .certificate__list--item:last-of-type {
+  border-bottom: 1px solid #ffffff41;
+}
+
+.experience-sec .experience-container .experience__modal-container.speci .experience__department .certificate__list--item a {
+  color: #2222dd;
+  text-decoration: underline;
+}
+
+.experience-sec .experience-container .experience__modal-container .experience__department {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 2rem;
+  gap: 1.5rem;
+}
+
+.experience-sec .experience-container .experience__modal-container .experience__department:last-of-type {
+  width: 70%;
+}
+
+.experience-sec .experience-container .experience__modal-container .experience__department .experience-list-modal {
+  text-align: start;
+  list-style-type: circle;
+}
+
+.experience-sec .experience-container .experience__modal-container .experience__department .experience-list-modal li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
 .experience-sec .experience-container .experience__modal-container .primary--text {
@@ -2334,9 +2532,8 @@ section.login-sec .sec-containerss .login-form .focus {
   border-radius: 0.5rem;
 }
 
-.profile-edit .text-edit__container .article__description {
-  width: 70%;
-  height: 200px;
+.profile-edit .text-edit__container #article__description {
+  border: 1px solid red;
 }
 
 @-webkit-keyframes slidein {
@@ -2380,6 +2577,50 @@ section.login-sec .sec-containerss .login-form .focus {
   to {
     opacity: 0;
     top: 50%;
+  }
+}
+
+@-webkit-keyframes slideinLeft {
+  from {
+    opacity: 0;
+    left: -20rem;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slideinLeft {
+  from {
+    opacity: 0;
+    left: -20rem;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slideinRight {
+  from {
+    opacity: 0;
+    right: -20rem;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes slideinRight {
+  from {
+    opacity: 0;
+    right: -20rem;
+  }
+  to {
+    opacity: 1;
+    right: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
