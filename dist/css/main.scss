@@ -148,6 +148,17 @@ ul {
   letter-spacing: 0.3px;
 }
 
+.notify-message {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+
+  a {
+    color: rgb(44, 112, 238);
+    text-decoration: underline;
+  }
+}
+
 .info-text {
   font-size: 1rem;
   font-family: $primary-font;
@@ -265,22 +276,24 @@ button.btn {
     gap: 2.25rem;
     position: relative;
 
-    @media screen and (max-width: 910px) {
-      justify-content: space-between;
-    }
+    // @media screen and (max-width: 960px) {
+    //   justify-content: space-between;
+    //   background-color: red;
+    // }
 
+    @media screen and (max-width: 1200px) {
+      gap: 1rem;
+    }
     @media screen and (max-width: 1000px) {
       grid-column: 1 / 10;
       padding-left: 1rem;
     }
 
-    @media screen and (max-width: 1200px) {
-      gap: 1rem;
-    }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 960px) {
       grid-column: 1 / -1;
       align-items: center;
       justify-content: center;
+      z-index: 100;
     }
 
     @media screen and (max-width: 652px) {
@@ -303,7 +316,7 @@ button.btn {
         margin-right: 5rem;
       }
 
-      @media screen and (max-width: 608px) {
+      @media screen and (max-width: 680px) {
         display: none;
       }
 
@@ -359,14 +372,39 @@ button.btn {
       left: 1rem;
       z-index: 2000;
 
-      @media screen and (max-width: 608px) {
+      @media screen and (max-width: 680px) {
         display: block;
       }
     }
 
-    .btn__login {
+    .user-btns {
       position: absolute;
       right: 1rem;
+      display: flex;
+
+      .btn {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 0.5rem;
+
+        &.user-logout {
+          margin-right: 0;
+        }
+
+        &__login.active {
+          display: none;
+          background-color: orange;
+        }
+        &.user-logout,
+        &.user-dashboard {
+          background-color: $black-color;
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -413,7 +451,7 @@ button.btn {
     @media screen and (max-width: 1000px) {
       grid-column: 10 / -1;
     }
-    @media screen and (max-width: 910px) {
+    @media screen and (max-width: 960px) {
       grid-column: 10 / -1;
       grid-row: 2 / -1;
     }
@@ -1695,6 +1733,11 @@ section.login-sec {
   background-color: $primary-color;
   .dashboard--container {
     padding-bottom: 1rem;
+    display: none;
+    position: relative;
+    &.active {
+      display: block;
+    }
   }
   .dashboard-type {
     display: flex;
@@ -1780,12 +1823,50 @@ section.login-sec {
   }
 }
 
+.dashboard-new-design {
+  position: absolute;
+  background-color: $secondary-color;
+  top: 50%;
+  left: 50%;
+  // left: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 70%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  .dashboard--container {
+    display: flex;
+    flex-direction: initial;
+    flex-wrap: wrap;
+
+    .primary--header {
+      width: 100%;
+    }
+
+    .image-edit__container {
+      width: 40%;
+      padding-top: 4rem;
+    }
+
+    .text-edit__container {
+      padding: 0;
+      width: 60%;
+    }
+  }
+}
+
 .profile-edit {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 
   .btn__create {
     &.move-position {
@@ -1877,10 +1958,6 @@ section.login-sec {
       color: $white-color;
       outline: none;
       border-radius: 0.5rem;
-    }
-
-    #article__description {
-      border: 1px solid red;
     }
   }
 }

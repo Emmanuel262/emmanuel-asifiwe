@@ -18,24 +18,25 @@
       <nav class="header__nav">
         <div class="header__nav--container">
           <a href="./index.html" class="header__nav--item btn">Home</a>
-          <a href="#" class="header__nav--item btn">About</a>
-          <a href="#" class="header__nav--item btn">Experience</a>
-          <a href="#" class="header__nav--item btn">Projects</a>
-          <a href="#" class="header__nav--item btn">Contact</a>
+          <a href="#info-section" class="header__nav--item btn">About</a>
+          <a href="#experience-sec" class="header__nav--item btn">Experience</a>
+          <a href="#projects-sec" class="header__nav--item btn">Projects</a>
+          <a href="#contact-sec" class="header__nav--item btn">Contact</a>
           <a href="./articles.html" class="header__nav--item btn">Articles</a>
         </div>
         <button class="btn" id="btn-deactive">
           <img src="./dist/img/bars.svg" alt="" />
         </button>
-        <a href="./login.html" class="header__nav--item btn btn__login"
-          >Login</a
-        >
+        <div class="user-btns">
+          <a href="#" class="header__nav--item btn user-dashboard">
+            Dashboard
+          </a>
+          <button class="header__nav--item btn user-logout">Logout</button>
+        </div>
       </nav>
-      <div class="header__intro">
+      <div class="header__intro dashboard">
         <h5 class="primary--header">
-          Hi ASIFIWE Emmanuel, Welcome to your dashboard. You can create, read,
-          update, and delete your articles. You can edit your profile.
-          <span class="focus">Enjoy your stay.</span>
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
         </h5>
       </div>
 
@@ -48,36 +49,10 @@
       </div>
     </header>
 
-    <section class="dashboard-sec">
-      <div class="dashboard--container profile-edit">
-        <h1 class="primary--header">Edit article to meet your needs</h1>
-        <div class="image-edit__container">
-          <input type="file" name="inpFile" id="inptFile" />
-          <div class="image-preview" id="imagePreview">
-            <img src="" alt="Image Preview" class="image-preview__image" />
-            <span class="image-preview__default-text">Image Preview</span>
-          </div>
-        </div>
-        <div class="text-edit__container">
-          <input
-            type="text"
-            class="article__title"
-            placeholder="article title"
-          />
-          <textarea
-            id="article__description"
-            class="article__description"
-            name="article__description"
-            placeholder="Please enter your input text"
-          >
-          </textarea>
-        </div>
-        <a href="./dashboard.html" class="btn btn__create move-position"
-          >Back</a
-        >
-        <a href="./dashboard.html" class="btn btn__create">Update Article</a>
-      </div>
-    </section>
+    <a href="#" class="back-top-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+    <section class="dashboard-sec"></section>
 
     <footer class="footer">
       <div class="sec-containerss">
