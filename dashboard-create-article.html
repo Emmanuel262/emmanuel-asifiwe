@@ -18,24 +18,25 @@
       <nav class="header__nav">
         <div class="header__nav--container">
           <a href="./index.html" class="header__nav--item btn">Home</a>
-          <a href="#" class="header__nav--item btn">About</a>
-          <a href="#" class="header__nav--item btn">Experience</a>
-          <a href="#" class="header__nav--item btn">Projects</a>
-          <a href="#" class="header__nav--item btn">Contact</a>
+          <a href="#info-section" class="header__nav--item btn">About</a>
+          <a href="#experience-sec" class="header__nav--item btn">Experience</a>
+          <a href="#projects-sec" class="header__nav--item btn">Projects</a>
+          <a href="#contact-sec" class="header__nav--item btn">Contact</a>
           <a href="./articles.html" class="header__nav--item btn">Articles</a>
         </div>
         <button class="btn" id="btn-deactive">
           <img src="./dist/img/bars.svg" alt="" />
         </button>
-        <a href="./login.html" class="header__nav--item btn btn__login"
-          >Login</a
-        >
+        <div class="user-btns">
+          <a href="#" class="header__nav--item btn user-dashboard">
+            Dashboard
+          </a>
+          <button class="header__nav--item btn user-logout">Logout</button>
+        </div>
       </nav>
-      <div class="header__intro">
+      <div class="header__intro dashboard">
         <h5 class="primary--header">
-          Hi ASIFIWE Emmanuel, Welcome to your dashboard. You can create, read,
-          update, and delete your articles. You can edit your profile.
-          <span class="focus">Enjoy your stay.</span>
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
         </h5>
       </div>
 
@@ -48,6 +49,9 @@
       </div>
     </header>
 
+    <a href="#" class="back-top-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
     <section class="dashboard-sec">
       <div class="dashboard--container profile-edit">
         <h1 class="primary--header">Edit article to meet your needs</h1>
@@ -256,8 +260,15 @@
       src="https://cdn.tiny.cloud/1/uxw88gysnnwhadan1yuu73x45eg9mypgqxfejq6e81gp32l3/tinymce/5/tinymce.min.js"
       referrerpolicy="origin"
     ></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="./dist/js/firebaseConf.js"></script>
     <script src="./dist/js/tinyMCE.js"></script>
-    <script src="./dist/js/main.js"></script>
     <script src="./dist/js/fileInput.js"></script>
+    <!-- <script src="./dist/js/authentication.js"></script> -->
+    <script src="./dist/js/dashboard.js"></script>
+    <script src="./dist/js/database.js"></script>
+    <!-- <script src="./dist/js/main.js"></script> -->
   </body>
 </html>

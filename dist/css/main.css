@@ -154,6 +154,17 @@ ul {
   letter-spacing: 0.3px;
 }
 
+.notify-message {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.notify-message a {
+  color: #2c70ee;
+  text-decoration: underline;
+}
+
 .info-text {
   font-size: 1rem;
   font-family: "Rancho", cursive;
@@ -302,11 +313,9 @@ button.btn {
   position: relative;
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1200px) {
   .header__nav {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    gap: 1rem;
   }
 }
 
@@ -319,13 +328,7 @@ button.btn {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .header__nav {
-    gap: 1rem;
-  }
-}
-
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 960px) {
   .header__nav {
     grid-column: 1 / -1;
     -webkit-box-align: center;
@@ -334,6 +337,7 @@ button.btn {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    z-index: 100;
   }
 }
 
@@ -365,7 +369,7 @@ button.btn {
   }
 }
 
-@media screen and (max-width: 608px) {
+@media screen and (max-width: 680px) {
   .header__nav--container {
     display: none;
   }
@@ -439,15 +443,42 @@ button.btn {
   z-index: 2000;
 }
 
-@media screen and (max-width: 608px) {
+@media screen and (max-width: 680px) {
   .header__nav #btn-deactive {
     display: block;
   }
 }
 
-.header__nav .btn__login {
+.header__nav .user-btns {
   position: absolute;
   right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav .user-btns .btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 0.5rem;
+}
+
+.header__nav .user-btns .btn.user-logout {
+  margin-right: 0;
+}
+
+.header__nav .user-btns .btn__login.active {
+  display: none;
+  background-color: orange;
+}
+
+.header__nav .user-btns .btn.user-logout, .header__nav .user-btns .btn.user-dashboard {
+  background-color: #000000;
+  display: none;
+}
+
+.header__nav .user-btns .btn.user-logout.active, .header__nav .user-btns .btn.user-dashboard.active {
+  display: block;
 }
 
 .header__intro {
@@ -516,7 +547,7 @@ button.btn {
   }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 960px) {
   .header__profile {
     grid-column: 10 / -1;
     grid-row: 2 / -1;
@@ -2287,6 +2318,12 @@ section.login-sec .sec-containerss .login-form .focus {
 
 .dashboard-sec .dashboard--container {
   padding-bottom: 1rem;
+  display: none;
+  position: relative;
+}
+
+.dashboard-sec .dashboard--container.active {
+  display: block;
 }
 
 .dashboard-sec .dashboard-type {
@@ -2398,6 +2435,51 @@ section.login-sec .sec-containerss .login-form .focus {
   font-size: 1.3rem;
 }
 
+.dashboard-new-design {
+  position: absolute;
+  background-color: #212128;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  width: 70%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  display: none;
+}
+
+.dashboard-new-design.active {
+  display: block;
+}
+
+.dashboard-new-design .dashboard--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dashboard-new-design .dashboard--container .primary--header {
+  width: 100%;
+}
+
+.dashboard-new-design .dashboard--container .image-edit__container {
+  width: 40%;
+  padding-top: 4rem;
+}
+
+.dashboard-new-design .dashboard--container .text-edit__container {
+  padding: 0;
+  width: 60%;
+}
+
 .profile-edit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2412,7 +2494,6 @@ section.login-sec .sec-containerss .login-form .focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 .profile-edit .btn__create.move-position {
@@ -2534,10 +2615,6 @@ section.login-sec .sec-containerss .login-form .focus {
   color: #ffffff;
   outline: none;
   border-radius: 0.5rem;
-}
-
-.profile-edit .text-edit__container #article__description {
-  border: 1px solid red;
 }
 
 @-webkit-keyframes slidein {

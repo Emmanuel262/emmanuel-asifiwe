@@ -35,23 +35,6 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-cardList.forEach((card) => {
-  const deleteBtn = card.querySelector(".btn__delete");
-  const cardConfirm = card.querySelector(".card__confirm-delete");
-  deleteBtn.addEventListener("click", () => {
-    console.log(card);
-    cardConfirm.classList.add("active");
-  });
-  const cancelBtn = cardConfirm.querySelector(".btn__create");
-  cancelBtn.addEventListener("click", () => {
-    cardConfirm.classList.remove("active");
-  });
-  const deleteConfirmBtn = cardConfirm.querySelector(".btn__delete");
-  deleteConfirmBtn.addEventListener("click", () => {
-    card.classList.add("remove");
-  });
-});
-
 infoReadMoreBtn.addEventListener("click", () => {
   modalContainer.classList.add("active");
 });

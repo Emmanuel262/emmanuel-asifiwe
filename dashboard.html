@@ -18,24 +18,25 @@
       <nav class="header__nav">
         <div class="header__nav--container">
           <a href="./index.html" class="header__nav--item btn">Home</a>
-          <a href="#" class="header__nav--item btn">About</a>
-          <a href="#" class="header__nav--item btn">Experience</a>
-          <a href="#" class="header__nav--item btn">Projects</a>
-          <a href="#" class="header__nav--item btn">Contact</a>
+          <a href="#info-section" class="header__nav--item btn">About</a>
+          <a href="#experience-sec" class="header__nav--item btn">Experience</a>
+          <a href="#projects-sec" class="header__nav--item btn">Projects</a>
+          <a href="#contact-sec" class="header__nav--item btn">Contact</a>
           <a href="./articles.html" class="header__nav--item btn">Articles</a>
         </div>
         <button class="btn" id="btn-deactive">
           <img src="./dist/img/bars.svg" alt="" />
         </button>
-        <a href="./login.html" class="header__nav--item btn btn__login"
-          >Login</a
-        >
+        <div class="user-btns">
+          <a href="#" class="header__nav--item btn user-dashboard">
+            Dashboard
+          </a>
+          <button class="header__nav--item btn user-logout">Logout</button>
+        </div>
       </nav>
-      <div class="header__intro">
+      <div class="header__intro dashboard">
         <h5 class="primary--header">
-          Hi ASIFIWE Emmanuel, Welcome to your dashboard. You can create, read,
-          update, and delete your articles. You can edit your profile.
-          <span class="focus">Enjoy your stay.</span>
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
         </h5>
       </div>
 
@@ -48,6 +49,9 @@
       </div>
     </header>
 
+    <a href="#" class="back-top-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
     <section class="dashboard-sec">
       <div class="dashboard--container">
         <div class="dashboard-type">
@@ -60,169 +64,49 @@
             >articles</a
           >
         </div>
-        <div class="cards" id="dashboard-cards">
-          <div class="card" id="dashboard-card">
-            <img
-              src="./dist/img/image-1.jpg"
-              alt="Card image"
-              class="card--img"
-            />
-            <p class="primary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              cursus turpis parturient vitae diam.
-            </p>
-            <div class="btn-types">
-              <a href="./articles.html" class="btn btn__read">Read</a>
-              <a href="./dashboard-edit-article.html" class="btn btn__edit"
-                >Edit</a
-              >
-              <button class="btn btn__delete">Delete</button>
-            </div>
-            <div class="card__confirm-delete">
-              <h6 class="secondary--text">Are you sure about deleting????</h6>
-              <div>
-                <button class="btn__delete btn">Delete</button>
-                <button class="btn btn__create">Cancel</button>
-              </div>
-            </div>
-          </div>
-          <div class="card" id="dashboard-card">
-            <img
-              src="./dist/img/image-1.jpg"
-              alt="Card image"
-              class="card--img"
-            />
-            <p class="primary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              cursus turpis parturient vitae diam.
-            </p>
-            <div class="btn-types">
-              <a href="./articles.html" class="btn btn__read">Read</a>
-              <a href="./dashboard-edit-article.html" class="btn btn__edit"
-                >Edit</a
-              >
-              <button class="btn btn__delete">Delete</button>
-            </div>
-            <div class="card__confirm-delete">
-              <h6 class="secondary--text">Are you sure about deleting????</h6>
-              <div>
-                <button class="btn__delete btn">Delete</button>
-                <button class="btn btn__create">Cancel</button>
-              </div>
-            </div>
-          </div>
-          <div class="card" id="dashboard-card">
-            <img
-              src="./dist/img/image-1.jpg"
-              alt="Card image"
-              class="card--img"
-            />
-            <p class="primary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              cursus turpis parturient vitae diam.
-            </p>
-            <div class="btn-types">
-              <a href="./articles.html" class="btn btn__read">Read</a>
-              <a href="./dashboard-edit-article.html" class="btn btn__edit"
-                >Edit</a
-              >
-              <button class="btn btn__delete">Delete</button>
-            </div>
-            <div class="card__confirm-delete">
-              <h6 class="secondary--text">Are you sure about deleting????</h6>
-              <div>
-                <button class="btn__delete btn">Delete</button>
-                <button class="btn btn__create">Cancel</button>
-              </div>
-            </div>
-          </div>
-          <div class="card" id="dashboard-card">
-            <img
-              src="./dist/img/image-1.jpg"
-              alt="Card image"
-              class="card--img"
-            />
-            <p class="primary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              cursus turpis parturient vitae diam.
-            </p>
-            <div class="btn-types">
-              <a href="./articles.html" class="btn btn__read">Read</a>
-              <a href="./dashboard-edit-article.html" class="btn btn__edit"
-                >Edit</a
-              >
-              <button class="btn btn__delete">Delete</button>
-            </div>
-            <div class="card__confirm-delete">
-              <h6 class="secondary--text">Are you sure about deleting????</h6>
-              <div>
-                <button class="btn__delete btn">Delete</button>
-                <button class="btn btn__create">Cancel</button>
-              </div>
-            </div>
-          </div>
-          <div class="card" id="dashboard-card">
-            <img
-              src="./dist/img/image-1.jpg"
-              alt="Card image"
-              class="card--img"
-            />
-            <p class="primary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              cursus turpis parturient vitae diam.
-            </p>
-            <div class="btn-types">
-              <a href="./articles.html" class="btn btn__read">Read</a>
-              <a href="./dashboard-edit-article.html" class="btn btn__edit"
-                >Edit</a
-              >
-              <button class="btn btn__delete">Delete</button>
-            </div>
-            <div class="card__confirm-delete">
-              <h6 class="secondary--text">Are you sure about deleting????</h6>
-              <div>
-                <button class="btn__delete btn">Delete</button>
-                <button class="btn btn__create">Cancel</button>
-              </div>
-            </div>
-          </div>
-          <div class="card" id="dashboard-card">
-            <img
-              src="./dist/img/image-1.jpg"
-              alt="Card image"
-              class="card--img"
-            />
-            <p class="primary--text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              cursus turpis parturient vitae diam.
-            </p>
-            <div class="btn-types">
-              <a href="./articles.html" class="btn btn__read">Read</a>
-              <a href="./dashboard-edit-article.html" class="btn btn__edit"
-                >Edit</a
-              >
-              <button class="btn btn__delete">Delete</button>
-            </div>
-            <div class="card__confirm-delete">
-              <h6 class="secondary--text">Are you sure about deleting????</h6>
-              <div>
-                <button class="btn__delete btn">Delete</button>
-                <button class="btn btn__create">Cancel</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="cards" id="dashboard-cards"></div>
         <div class="advanced-btns">
           <a href="#" class="btn btn__primary">Load More articles</a>
-          <a
-            href="./dashboard-create-article.html"
-            class="btn btn__primary btn__create"
-            >Crete new article</a
-          >
+          <button class="btn btn__primary btn__create dashboard--create-btn">
+            Crete new article
+          </button>
         </div>
       </div>
     </section>
-
+    <div class="dashboard-new-design">
+      <div class="dashboard--container profile-edit">
+        <h1 class="primary--header">Edit article to meet your needs</h1>
+        <div class="image-edit__container">
+          <input type="file" name="inpFile" id="inptFile" />
+          <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview__image" />
+            <span class="image-preview__default-text">Image Preview</span>
+          </div>
+        </div>
+        <div class="text-edit__container">
+          <input
+            type="text"
+            class="article__title"
+            placeholder="article title"
+          />
+          <textarea
+            id="article__description"
+            class="article__description"
+            name="article__description"
+            placeholder="Please enter your input text"
+          >
+          </textarea>
+        </div>
+        <a
+          href="./dashboard.html"
+          class="btn btn__create move-position back-btn-dash"
+          >Back</a
+        >
+        <button class="btn btn__create dashboard--update-btn">
+          Update Article
+        </button>
+      </div>
+    </div>
     <footer class="footer">
       <div class="sec-containerss">
         <div class="footer__contents">
@@ -308,6 +192,20 @@
         </div>
       </div>
     </footer>
-    <script src="./dist/js/main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="./dist/js/firebaseConf.js"></script>
+    <script
+      src="https://cdn.tiny.cloud/1/uxw88gysnnwhadan1yuu73x45eg9mypgqxfejq6e81gp32l3/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <!-- <script src="./dist/js/authentication.js"></script> -->
+    <script src="./dist/js/dashboard.js"></script>
+    <script src="./dist/js/database.js"></script>
+    <!-- <script src="./dist/js/main.js"></script> -->
+    <script src="./dist/js/tinyMCE.js"></script>
+    <script src="./dist/js/fileInput.js"></script>
   </body>
 </html>
