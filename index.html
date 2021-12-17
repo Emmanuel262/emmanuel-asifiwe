@@ -28,8 +28,15 @@
         <button class="btn" id="btn-deactive">
           <img src="./dist/img/bars.svg" alt="" />
         </button>
-        <button class="header__nav--item btn btn__login"
-          >Login</button>
+        <button class="header__nav--item btn btn__login">
+          Login
+        </button>
+        <a href="#" class="header__nav--item btn btn__login">
+          Dashboard
+        </a>
+        <button class="header__nav--item btn btn__login">
+          Logout
+        </button>
       </nav>
       <div class="header__intro">
         <h5 class="primary--header">
@@ -720,6 +727,12 @@
       </div>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="./dist/js/firebaseConf.js"></script>
+    <script src="./dist/js/authentication.js"></script>
+    <script src="./dist/js/database.js"></script>
     <script src="./dist/js/main.js"></script>
   </body>
 </html>
