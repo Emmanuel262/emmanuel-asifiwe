@@ -33,7 +33,7 @@ body {
   font-weight: $secondary-font;
   color: $white-color;
   font-size: 100%;
-  position: absolute;
+  position: relative;
 
   @media screen and (max-width: 1200px) {
     font-size: 90%;
@@ -43,6 +43,12 @@ body {
 a {
   color: $white-color;
   text-decoration: none;
+
+  &.normal-link {
+    font-size: 2rem;
+    color: rgb(44, 112, 238);
+    text-decoration: underline;
+  }
 
   &.back-top-top {
     color: $black-color;
@@ -146,6 +152,13 @@ ul {
   font-weight: 100;
   line-height: 1.8;
   letter-spacing: 0.3px;
+}
+
+.secondary--text {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  text-align: initial;
 }
 
 .notify-message {
@@ -1476,6 +1489,20 @@ button.btn {
           line-height: 1.4;
           margin-bottom: 1rem;
         }
+
+        a#normal-link {
+          margin: 2rem 0;
+          color: #0f9cdd;
+          font-size: 1.3rem;
+        }
+
+        .navigation--btn__resources {
+          margin: 1.5rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+        }
       }
 
       &--images {
@@ -1491,9 +1518,8 @@ button.btn {
           gap: 1.2rem;
 
           img {
-            width: 10rem;
+            width: 20rem;
             border: 1px solid $white-color;
-            // height: 10rem;
             object-fit: cover;
           }
 
@@ -1638,6 +1664,41 @@ button.btn {
           align-self: center;
         }
       }
+    }
+  }
+}
+
+.trial-message__container {
+  background-color: $secondary-color;
+  box-shadow: 0 0.2rem 0.5rem $black-color;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  height: 10%;
+  transform: translate(-50%, -50%);
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  .primary--header {
+    font-size: 1.5rem;
+  }
+
+  div {
+    padding: 2rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $black-color;
     }
   }
 }

@@ -17,7 +17,7 @@ body {
   font-weight: "Nunito", sans-serif;
   color: #ffffff;
   font-size: 100%;
-  position: absolute;
+  position: relative;
 }
 
 @media screen and (max-width: 1200px) {
@@ -29,6 +29,12 @@ body {
 a {
   color: #ffffff;
   text-decoration: none;
+}
+
+a.normal-link {
+  font-size: 2rem;
+  color: #2c70ee;
+  text-decoration: underline;
 }
 
 a.back-top-top {
@@ -152,6 +158,13 @@ ul {
   font-weight: 100;
   line-height: 1.8;
   letter-spacing: 0.3px;
+}
+
+.secondary--text {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  text-align: initial;
 }
 
 .notify-message {
@@ -1993,6 +2006,26 @@ button.btn {
   margin-bottom: 1rem;
 }
 
+.article-sec .article__container--article a#normal-link {
+  margin: 2rem 0;
+  color: #0f9cdd;
+  font-size: 1.3rem;
+}
+
+.article-sec .article__container--article .navigation--btn__resources {
+  margin: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
 .article-sec .article__container--images {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2019,7 +2052,7 @@ button.btn {
 }
 
 .article-sec .article__container--images .img-one img {
-  width: 10rem;
+  width: 20rem;
   border: 1px solid #ffffff;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2204,6 +2237,49 @@ button.btn {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.trial-message__container {
+  background-color: #212128;
+  -webkit-box-shadow: 0 0.2rem 0.5rem #000000;
+          box-shadow: 0 0.2rem 0.5rem #000000;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  height: 10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.trial-message__container.active {
+  display: block;
+}
+
+.trial-message__container .primary--header {
+  font-size: 1.5rem;
+}
+
+.trial-message__container div {
+  padding: 2rem;
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.trial-message__container div .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000000;
 }
 
 section.login-sec {

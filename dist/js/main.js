@@ -16,6 +16,8 @@ const loginBtn = document.querySelector(".btn__login");
 const loginSec = document.querySelector(".login-sec");
 const loginCloseBtn = document.querySelector(".login-close--btn");
 const backTopBtn = document.querySelector(".back-top-top");
+const trialBtns = document.querySelectorAll(".trial-disable");
+const trialMessage = document.querySelector(".trial-message__container");
 
 const addActive = (container, img = "") => {
   container.classList.add("active");
@@ -25,6 +27,18 @@ const removeActive = (container, img = "") => {
   container.classList.remove("active");
   img.src = "./dist/img/bars.svg";
 };
+
+// trialBtns.forEach((trial) => {
+//   trial.addEventListener("click", () => {
+//     addActive(trialMessage);
+//   });
+// });
+
+// trialMessage
+//   .querySelector(".login-close--btn")
+//   .addEventListener("click", () => {
+//     removeActive(trialMessage);
+//   });
 
 toggleBtn.addEventListener("click", () => {
   const img = toggleBtn.querySelector("img");
