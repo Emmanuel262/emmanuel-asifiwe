@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
+    <link id="theme-style" rel="stylesheet" href="" />
+
     <title>Coal Mine Monitoring System</title>
   </head>
   <body>
@@ -25,15 +27,17 @@
       </nav>
       <div class="header__intro">
         <h5 class="primary--header">
-          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer
+          Junior.
         </h5>
       </div>
 
       <div class="header__profile">
         <img
-          src="./dist/img/real-profile.jpeg"
+          src="./dist/img/real-profile.png"
           alt="Profile picture"
           class="header__profile--img"
+          style="top: 0"
         />
       </div>
     </header>
@@ -55,21 +59,6 @@
 
     <section class="article-sec">
       <div class="article-container">
-        <!-- <div class="article__nav">
-          <button class="article__nav--item btn trial-disable">All</button>
-          <button class="article__nav--item btn trial-disable">
-            Education in general
-          </button>
-          <button class="article__nav--item btn trial-disable">FrontEnd</button>
-          <button class="article__nav--item btn trial-disable">BackEnd</button>
-          <button class="article__nav--item btn trial-disable">
-            Machine Learning
-          </button>
-          <button class="article__nav--item btn trial-disable">Music</button>
-          <button class="article__nav--item btn trial-disable">
-            Inventions
-          </button>
-        </div> -->
         <div class="article__container">
           <div class="article__container--article">
             <h5 class="primary--header">
@@ -267,16 +256,18 @@
               different courses and their certificates.
             </p>
 
-            <div class="btn btn__primary">Learn More</div>
+            <a href="./index.html" class="btn btn__primary">Learn More</a>
           </div>
         </div>
         <div class="footer__footer">
           <p class="info-text">
-            We are here for you. don't hesitate to contact me.
+            I am here for you. don't hesitate to contact me.
             <span>&#8594;</span>
           </p>
           <div class="social-contact">
-            <a href="#" class="btn btn__white">Contact me</a>
+            <a href="./index.html#contact-sec" class="btn btn__white"
+              >Contact me</a
+            >
             <div class="info__social-media">
               <a href="#" class="info__social-media--item">
                 <img
@@ -319,11 +310,31 @@
       </div>
     </footer>
 
+    <div class="available-themes">
+      <div class="theme__list">
+        <div
+          class="theme__list--item white btn theme-btn"
+          id="white-theme"
+          data-mode="white-mode"
+        >
+          white mode
+        </div>
+        <div
+          class="theme__list--item black btn theme-btn"
+          id="black-theme"
+          data-mode="black-mode"
+        >
+          black mode
+        </div>
+      </div>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
     <script src="./dist/js/firebaseConf.js"></script>
     <script src="./dist/js/articles.js"></script>
     <script src="./dist/js/main.js"></script>
+    <script src="./dist/js/theme-js.js"></script>
   </body>
 </html>

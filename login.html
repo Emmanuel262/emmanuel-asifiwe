@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
+    <link id="theme-style" rel="stylesheet" href="" />
+
     <title>Articles provided by Emmanuel</title>
   </head>
   <body>
@@ -43,7 +45,7 @@
 
       <div class="header__profile">
         <img
-          src="./dist/img/profile-picture.jpg"
+          src="./dist/img/real-profile.png"
           alt="Profile picture"
           class="header__profile--img"
         />
@@ -135,7 +137,26 @@
         </div>
       </div>
     </footer>
+    <div class="available-themes">
+      <div class="theme__list">
+        <div
+          class="theme__list--item white btn theme-btn"
+          id="white-theme"
+          data-mode="white-mode"
+        >
+          white mode
+        </div>
+        <div
+          class="theme__list--item black btn theme-btn"
+          id="black-theme"
+          data-mode="black-mode"
+        >
+          black mode
+        </div>
+      </div>
+    </div>
 
     <script src="./dist/js/main.js"></script>
+    <script src="./dist/js/theme-js.js"></script>
   </body>
 </html>

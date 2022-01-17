@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
+    <link id="theme-style" rel="stylesheet" href="">
     <title>Emmanuel's Brand</title>
   </head>
   <body>
@@ -40,13 +41,13 @@
       </nav>
       <div class="header__intro">
         <h5 class="primary--header">
-          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer.
+          <span>Hi, I'm ASIFIWE Emmanuel.</span> Machine Learning Engineer Junior.
         </h5>
       </div>
 
       <div class="header__profile">
         <img
-          src="./dist/img/real-profile.jpeg"
+          src="./dist/img/real-profile.png"
           alt="Profile picture"
           class="header__profile--img"
         />
@@ -218,13 +219,13 @@
           </button>
         </div>
         <div class="experience-container active" id="rba-experience">
-          <h6 class="secondary--header">
+          <p class="secondary--text">
             I was trained By Rwanda Broadcasting Agency Engineers.
             <span>
               I rapidly discovered that performing engineering on paper and a
               computer is not the same as doing it in real life.</span
             >
-          </h6>
+          </p>
 
           <p class="secondary--text">
             My daily activities was to make sure that broadcasting is going
@@ -521,8 +522,8 @@
 
     <section class="contact-sec" id="contact-sec">
       <div class="sec-container">
-        <h5 class="primary--header">Contact us</h5>
         <div class="left-div">
+          <h5 class="primary--header">Contact us</h5>
           <h6 class="secondary--header">The reasons to contact us</h6>
           <p class="primary--text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit cursus
@@ -558,7 +559,7 @@
                 name="message"
                 id="message"
                 cols="20"
-                rows="5"
+                rows="3"
                 class="form-group__textarea"
               ></textarea>
             </div>
@@ -603,12 +604,13 @@
               different courses and their certificates.
             </p>
 
-            <button class="btn btn__primary" id="info-readmore">Learn More</button>
+            <a href="#" class="btn btn__primary" id="info-readmore">Learn More</a>
+
           </div>
         </div>
         <div class="footer__footer">
           <p class="info-text">
-            We are here for you. don't hesitate to contact me.
+            I am here for you. don't hesitate to contact me.
             <span>&#8594;</span>
           </p>
           <div class="social-contact">
@@ -653,6 +655,13 @@
       </div>
     </footer>
 
+    <div class="available-themes">
+      <div class="theme__list">
+        <div class="theme__list--item white btn theme-btn" id="white-theme" data-mode="white-mode">white mode</div>
+        <div class="theme__list--item black btn theme-btn" id="black-theme" data-mode="black-mode">black mode</div>
+      </div>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
@@ -660,5 +669,6 @@
     <script src="./dist/js/authentication.js"></script>
     <script src="./dist/js/database.js"></script>
     <script src="./dist/js/main.js"></script>
+    <script src="./dist/js/theme-js.js"></script>
   </body>
 </html>
