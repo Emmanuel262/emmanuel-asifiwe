@@ -18,6 +18,8 @@ const loginCloseBtn = document.querySelector(".login-close--btn");
 const backTopBtn = document.querySelector(".back-top-top");
 const trialBtns = document.querySelectorAll(".trial-disable");
 const trialMessage = document.querySelector(".trial-message__container");
+const rbaContainer = document.getElementById("rba-experience--modal");
+const expBtn = document.getElementById("learn-more-exp-btn");
 
 const addActive = (container, img = "") => {
   container.classList.add("active");
@@ -27,6 +29,11 @@ const removeActive = (container, img = "") => {
   container.classList.remove("active");
   img.src = "./dist/img/bars.svg";
 };
+
+expBtn.addEventListener("click", () => {
+  console.log("clicked");
+  rbaContainer.classList.add("active");
+});
 
 // trialBtns.forEach((trial) => {
 //   trial.addEventListener("click", () => {
