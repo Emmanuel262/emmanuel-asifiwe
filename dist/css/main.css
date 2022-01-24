@@ -1663,8 +1663,21 @@ button.btn {
           align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .contact-sec .sec-container {
+    margin-top: -12rem;
+  }
+}
+
+@media screen and (max-width: 754px) {
+  .contact-sec .sec-container {
+    margin-top: -9rem;
+  }
+}
+
 @media screen and (max-width: 680px) {
   .contact-sec .sec-container {
+    margin-top: 0;
     -ms-grid-rows: min-content (1fr)[3];
         grid-template-rows: -webkit-min-content repeat(3, 1fr);
         grid-template-rows: min-content repeat(3, 1fr);
@@ -1751,6 +1764,7 @@ button.btn {
   font-size: 1.3rem;
   line-height: 1.6;
   padding: 1rem 2rem;
+  text-align: left;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1854,7 +1868,7 @@ button.btn {
 }
 
 .form-group__input, .form-group__textarea {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   padding: 0.5rem 0.7rem;
   outline: none;
   font-family: "Andika", sans-serif;
@@ -1862,6 +1876,7 @@ button.btn {
   color: #ffffff;
   border: none;
   font-weight: 100;
+  line-height: 1.3;
 }
 
 .form-group__input:focus, .form-group__input:active, .form-group__textarea:focus, .form-group__textarea:active {
@@ -2997,6 +3012,7 @@ section.login-sec .sec-containerss .login-form .focus {
   height: fit-content;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000000;
 }
 
 @media screen and (max-width: 960px) {
@@ -3052,6 +3068,70 @@ section.login-sec .sec-containerss .login-form .focus {
 .available-themes .theme__list--item.btn {
   text-align: center;
   padding: 0.5rem 0.2rem;
+}
+
+.thank-container {
+  height: 100vh;
+  width: 100%;
+  background-color: #212128;
+  position: relative;
+}
+
+.thank-container .center-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 450px;
+  height: 100px;
+  background-color: #0f0f2c;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.thank-container .center-container .primary--header {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.thank-container .center-container .primary--header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #ffffff;
+}
+
+.thank-container .center-container .primary--text {
+  font-size: 1.1rem;
+}
+
+.thank-container .btn {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #0f0f2c;
+  color: #ffffff;
 }
 
 @-webkit-keyframes slidein {

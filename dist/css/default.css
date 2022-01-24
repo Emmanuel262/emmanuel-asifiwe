@@ -29,6 +29,10 @@ a.back-top-top {
   color: #000000;
 }
 
+.header__nav #btn-deactive {
+  background-color: #000000;
+}
+
 .info-section {
   background-color: white;
 }
@@ -108,6 +112,7 @@ a.back-top-top {
 .form-group__input, .form-group__textarea {
   background-color: #ffffff;
   outline: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000000;
 }
 
 .form-group__input:active, .form-group__input:hover, .form-group__textarea:active, .form-group__textarea:hover {
@@ -124,6 +129,11 @@ a.back-top-top {
 
 .footer__footer {
   border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer__footer .social-contact .info__social-media {
+  background-color: rgba(10, 35, 56, 0.883);
+  padding: 0.2rem 1rem;
 }
 
 .footer .btn {
@@ -143,5 +153,24 @@ a.back-top-top {
 .article-sec .article__container--sidebar .article__nav.explore .btn {
   margin-bottom: 0.1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.thank-container {
+  background-color: #f2f2f2;
+}
+
+.thank-container .center-container {
+  background-color: white;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.thank-container .center-container .primary--header::after {
+  background-color: #000000;
+}
+
+.thank-container .btn {
+  background-color: white;
+  color: #000000;
 }
 /*# sourceMappingURL=default.css.map */

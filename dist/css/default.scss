@@ -42,6 +42,12 @@ a {
   }
 }
 
+.header__nav {
+  #btn-deactive {
+    background-color: $black-color;
+  }
+}
+
 .info-section {
   background-color: $primary-color;
 
@@ -132,6 +138,7 @@ a {
     &__textarea {
       background-color: $white-color;
       outline: 1px solid rgba($black-color, 0.2);
+      color: $black-color;
 
       &:active,
       &:hover {
@@ -150,6 +157,13 @@ a {
 
   &__footer {
     border-top: 2px solid rgba($black-color, 0.1);
+
+    .social-contact {
+      .info__social-media {
+        background-color: rgba(10, 35, 56, 0.883);
+        padding: 0.2rem 1rem;
+      }
+    }
   }
 
   .btn {
@@ -171,5 +185,25 @@ a {
         border: 1px solid rgba($black-color, 0.2);
       }
     }
+  }
+}
+
+// Thank you page
+.thank-container {
+  background-color: $secondary-color;
+  .center-container {
+    background-color: $primary-color;
+    color: $black-color;
+    border: 1px solid rgba($black-color, 0.1);
+    .primary--header {
+      &::after {
+        background-color: $black-color;
+      }
+    }
+  }
+
+  .btn {
+    background-color: $primary-color;
+    color: $black-color;
   }
 }
