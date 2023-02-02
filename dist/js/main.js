@@ -123,10 +123,14 @@ experienceBtns.forEach((btn) => {
       checkActive(experienceBtns);
       btn.classList.add("active");
       experienceActive("school");
-    } else {
+    } else if {
       checkActive(experienceBtns);
       btn.classList.add("active");
       experienceActive("andela");
+    } else {
+      checkActive(experienceBtns);
+      btn.classList.add("active");
+      experienceActive("tek-experts");
     }
   });
 });
