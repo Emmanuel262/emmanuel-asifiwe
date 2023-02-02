@@ -109,6 +109,7 @@ const experienceActive = (experienceSelector) => {
       if (experience.id === "tek-experience") {
         checkActive(experienceContainers);
         experience.classList.add("active")
+      }
     }
   });
 };
